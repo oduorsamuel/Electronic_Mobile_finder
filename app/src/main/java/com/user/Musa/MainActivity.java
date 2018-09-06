@@ -181,20 +181,13 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setSupportMultipleWindows(true);
             webSettings.setGeolocationEnabled(true);
             webSettings.setAllowFileAccess(true);
-            myWebView.loadUrl("http://lostfinders.co.ke/");
+            myWebView.loadUrl("https://musasms.000webhostapp.com/");
         }
         else{
             Toast.makeText(this, "No internet connection" ,Toast .LENGTH_SHORT).show();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         mySwipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
